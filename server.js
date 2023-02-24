@@ -25,6 +25,7 @@ app.use(expressLayouts)
 
 
 //import routes
+const authRoute = require('./routes/auth')
 
 
 
@@ -40,6 +41,7 @@ app.use(passport.session())
 
 
 //mount route
+app.use('/', authRoute)
 
 // Starting the server and listening for incoming requests on the specified ports
 app.listen(PORT, ()=>{
