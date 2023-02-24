@@ -1,21 +1,22 @@
-const mongoose =require('mongoose')
-const bcrypt =require('bycrypy')
+const mongoose = require('mongoose')
+const bcrybt = require('bcrypt')
 
+const userSchema = mongoose.Schema({
+    firstName: {type: String, required: true},
+    lastName: {type: String, required: true},
+    emailAddress: {type: String, required: true},
+    password: {type: String, required: true}
+},{
+    timestamps: true
+})
 
-const UserSchema = mongoose.Schema({
-    firstName : {type: String , require:true},
-    lastName : {type: String , require:true},
-    emailAddress: {type: String , require:true},
-    password : {type: String , require:true}
-    },{
-        timestamps : true
-    })
-    
-    // UserSchema.methods.verifyPassword = function(password){
-    //     console.log('Verifying:', password)
-    //     console.log(this.password)
-    //     return bcrypt.compareSync(password, this.password)
-    // }
-    
-    const User = mongoose.model('User',UserSchema)
-    module.exports = User;
+userSchema.methods.verifyPassword = function(password){
+    console.log('verifying' , password)
+    console.log(this.password)
+    // compares the password that we passed and the this.password is in userSchema that the user entered
+    return bcrybt.compareSync(password, this.password)
+}
+
+const User = mongoose.model('User' , userSchema)
+
+module.exports = User
