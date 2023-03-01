@@ -1,12 +1,16 @@
 const mongoose = require('mongoose')
 
 const applicantSchema = mongoose.Schema({
-    phone: String,
-    CV: String,
-    User: [{
+    phone: {type:String , require},
+    CV: {type:String , require},
+    job: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Job'
+    }],
+    user: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
-    }]
+    }],
 
 },{
     timestamps: true

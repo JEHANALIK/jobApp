@@ -1,11 +1,8 @@
 const express = require('express')
 
 const router = express.Router()
-
-
-const authControl = require('../controllers/auth')
-
 router.use(express.urlencoded({ extended: true }));
+const authControl = require('../controllers/auth')
 
 router.get('/auth/signup' , authControl.auth_signup_get)
 router.post('/auth/signup' , authControl.auth_signup_post)
@@ -20,5 +17,7 @@ router.post ('/auth/edit',authControl.auth_update_post)
 
 router.get('/auth/changePass',authControl.auth_changePass_get)
 router.post('/auth/changePass', authControl.auth_changePass_post)
+
+router.get('/auth/profile',authControl.auth_profile_get)
 
 module.exports = router

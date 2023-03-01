@@ -23,7 +23,7 @@ const expressLayouts = require('express-ejs-layouts')
 // look into views folder with a file name called layout.ejs
 app.use(expressLayouts)
 
-// most important thing 
+// most important thing     
 require('dotenv').config();
 
 //import routes
@@ -42,6 +42,12 @@ app.use(session({
  }))
  app.use(passport.initialize())
  app.use(passport.session())
+
+ // adding this middleWare to take user info
+ app.use(function(req, res, next){
+    res.locals.currentUser = req.user;
+    next();
+ })
 
 
 //mount route

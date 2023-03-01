@@ -1,0 +1,43 @@
+<%- include('../user/Userheader') %>
+<h1> Edit Job Offer </h1>
+<form method="POST" action="/job/editJob">
+    <div class="card">
+        <div class="card-body col-lg-9 col-md-12 col-sm-12">
+
+            <div class="form-floating mb-3 ">
+                <input name="title" type="text" class="form-control" id="floatingInput" placeholder="text" value="<%= job.title %>">
+                <label for="floatingInput">Title</label>
+              </div>
+
+            <div class="form-floating mb-3 ">
+                <input name="salary" type="text" class="form-control" id="floatingInput" placeholder="text" value="<%=job.salary %>">
+                <label for="floatingInput">Salary</label>
+              </div>
+
+            <div class="form-floating mb-3 ">
+                <input name="organization" type="text" class="form-control" id="floatingInput" placeholder="text" value="<%= job.organization%>">
+                <label for="floatingInput">orgnization</label>
+              </div> 
+
+            <div class="form-floating mb-3 ">
+                <textarea name="description"  cols="30" rows="10" class="form-control" id="floatingInput" placeholder="text" ><%=job.description%></textarea>
+                <label for="floatingInput">description</label>
+              </div>
+
+            <div class="form-floating mb-3 ">
+                <input name="timeType" type="text" class="form-control" id="floatingInput" placeholder="text" value="<%=job.timeType%>">
+                <label for="floatingInput">Time Type</label>
+              </div>
+              
+            <div class="form-floating mb-3 ">
+                <input name="location" type="location" class="form-control" id="floatingInput" placeholder="text" value="<%= job.location%>">
+                <label for="floatingInput">Location</label>
+              </div> 
+
+            <div>
+              <button type="submit" class="btn btn-outline-secondary btn-md">Edit Job</button>
+              </div>
+              <input type="hidden"value="<%=job._id %>" name="id">
+        </div>
+      </div>
+</form>

@@ -1,56 +1,29 @@
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: rgba(36, 38, 37, 0.824);"">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/index"><img src="" alt="this is logo"> </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">My Job Offers</a>
-          <li><a class="dropdown-item" href="/auth/edit">Edit Profile</a></li>
-          <li><a class="dropdown-item" href="/auth/changePass">Change password</a></li>
-        </li>
-      </ul>
-      <ul class="navbar-nav justify-content-end">
-        <li class="nav-item dropdown ">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-            Profile
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          
-            <li><a class="dropdown-item" href="#">Change Password</a></li>
-            <li><a class="dropdown-item" href="/auth/logout">Log Out</a></li>
-          </ul>
-        </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
+<%- include('../user/Userheader') %>
 <form method="POST" action="/auth/edit">
     <div class="card">
         <div class="card-body col-lg-9 col-md-12 col-sm-12">
 
             <div class="form-floating mb-3 ">
-                <input name="firstName" type="text" class="form-control" id="floatingInput" placeholder="Password" value="<%= users.firstName%>">
+                <input name="firstName" type="text" class="form-control" id="floatingInput" placeholder="Password" value="<%= users.firstName%>" required>
                 <label for="floatingPassword">First Name</label>
               </div> 
 
               <div class="form-floating mb-3">
-                <input name="lastName" type="text" class="form-control" id="floatingInput" placeholder="Password" value="<%= users.lastName%>" >
+                <input name="lastName" type="text" class="form-control" id="floatingInput" placeholder="Password" value="<%= users.lastName%>" required>
                 <label for="floatingPassword">Last Name</label>
               </div>
 
             <div class="form-floating mb-3">
-                <input name="emailAddress" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="<%= users.emailAddress%>" >
+                <input name="emailAddress" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="<%= users.emailAddress%>" required>
                 <label for="floatingInput">Email address</label>
               </div>
 
               <div>
                 <input type="hidden" value="<%= users._id %>"  name='id'>
-                <button type="submit" class="btn btn-outline-secondary btn-md">Edit</button>
+                <button type="submit" class="btn btn-outline-secondary btn-md">Save</button>
+                <a href="changePass" class="btn btn-secondary btn-lg " role="button" >Change Password </a>
               </div>
+              
 
         </div>
       </div>

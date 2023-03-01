@@ -1,28 +1,42 @@
-<h1>Jobs</h1>
-
-<table>
-    <tr>
-        <th>Title</th>
-        <th>Salary</th>
-        <th>orgnization</th>
-        <th>description</th>
-        <th>timeType</th>
-        <th>location</th>
-        <th>Edit</th>
-        <th>Delete</th>
-    </tr>
-
+<%- include('../user/Userheader') %>
     <% jobs.forEach(function(job) { %>
-        <tr>
-            <td><%= job.title %>  </td>
-            <td> <%= job.Salary %> </td>
-            <td> <%= job.orgnization %> </td>
-            <td> <%= job.description %> </td>
-            <td> <%= job.timeType %> </td>
-            <td> <%= job.location %> </td>
-        </td>
-    </tr>
-    <% }) %>
-  
+        <% const UserId=String(job.UserId[0]) %>
+            <% const CurrentUserId=String(currentUser._id) %>
+                <% if( UserId !=CurrentUserId ) {%>
+                    <div class="job-item p-4 mb-4">
+                        <div class="row g-4">
+                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                <div class="text-start ps-4">
 
-</table>
+                                    <!-- check if the user apply for this job or -->
+                                    <h5 class="mb-3">
+                                        <%= job.title %>
+                                    </h5>
+                                    <span class="text-truncate me-3"><i
+                                            class="fa fa-map-marker-alt text-primary me-2"></i>
+                                        <%= job.location %>
+                                    </span>
+                                    <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>
+                                        <%= job.timeType %>
+                                    </span>
+                                    <span class="text-truncate me-0"><i
+                                            class="far fa-money-bill-alt text-primary me-2"></i>
+                                        <%= job.salary %>
+                                    </span>
+                                </div>
+                            </div>
+                            <div
+                                class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                <div class="d-flex mb-3">
+                                    <a class="btn btn-light btn-square me-3" href=""><i
+                                            class="far fa-heart text-primary"></i></a>
+                                    <a class="btn btn-primary" href="/job/detail?id=<%= job._id %>">Apply Now</a>
+                                </div>
+                                <small class="text-truncate">
+                                    <%= job.organization%>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                        <% }) %>

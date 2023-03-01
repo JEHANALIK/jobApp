@@ -1,0 +1,39 @@
+<%- include('../user/Userheader') %>
+    <% applicants.forEach(function(applicant) { %>
+        <% const UserId=String(applicant.user[0]) %>
+            <% const CurrentUserId=String(currentUser._id) %>
+                <% if( UserId==CurrentUserId ) {%>
+                    <div class="job-item p-4 mb-4">
+                        <div class="row g-4">
+                            <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                <div class="text-start ps-4">
+
+                                    <!-- to print job Information  -->
+                                    <% applicant.job.forEach(function(OneJob) {%>
+                                        <%= OneJob.title %>
+                                            <span class="text-truncate me-3"><i
+                                                    class="fa fa-map-marker-alt text-primary me-2"></i>
+                                                <%= OneJob.location %>
+                                            </span>
+                                            <span class="text-truncate me-3"><i
+                                                    class="far fa-clock text-primary me-2"></i>
+                                                <%= OneJob.timeType %>
+                                            </span>
+                                            <span class="text-truncate me-0"><i
+                                                    class="far fa-money-bill-alt text-primary me-2"></i>
+                                                <%= OneJob.salary %>
+                                            </span>
+                                            <!-- to print appalicant info -->
+                                            <span class="text-truncate me-3"><i
+                                                    class="fa fa-map-marker-alt text-primary me-2"></i> your phone Num :
+                                                <%= applicant.phone %>
+                                            </span>
+                                            <% }) %>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                        <% }) %>

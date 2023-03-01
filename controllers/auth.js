@@ -36,7 +36,7 @@ exports.auth_signin_get = (req, res) => {
 
 // authonticating for sigin -POST
 exports.auth_signin_post = passport.authenticate('local', {
-    successRedirect: '/index', //this is like the home page
+    successRedirect: '/job/viewJob', //this is like the home page
     failureRedirect: '/auth/signin'
 })
 
@@ -69,7 +69,7 @@ exports.auth_update_post = (req, res) => {
     console.log(req.body.id)
     User.findByIdAndUpdate(req.body.id, req.body)
         .then(() => {
-            res.redirect('/auth/edit')
+            res.redirect("/auth/profile")
         })
         .catch(err => {
             console.log(err)
@@ -91,28 +91,26 @@ let hashedPass
 //HTTP edit password - Post
 exports.auth_changePass_post = (req, res) => {
     if (req.body.Password !== req.body.Password2) {
-        // console.log('chngeee pass ')
-        // console.log(req.body.Password)
-        // console.log(req.body.Password2)
-        // console.log('here is id')
-        // console.log(req.body.id)
-        // console.log('here hashed pass')
-
         return res.send('wrong !')
-        // console.log(hashedPass)
     }
     hashedPass = bcrypt.hashSync(req.body.Password, 8)
     User.findByIdAndUpdate(req.body.id, { password: hashedPass })
 
-        // var pass = req.body.Password
-        // bcrypt.genSalt(saltRounds, function(err ,salt){
-        //     bcrypt.hash(pass ,salt , function(err,hash){
-
-        //     }))
         .then(() => {
-            res.redirect('/auth/changePass')
+            res.redirect('/auth/profile')
         })
         .catch(err => {
             console.log(err)
         })
+}
+
+exports.auth_profile_get = (req,res) => {
+     User.findById(req.user._id)
+     
+     .then(user => {
+        res.render('auth/profile', { user })
+    })
+    .catch(err => {
+        console.log(err)
+    })
 }
