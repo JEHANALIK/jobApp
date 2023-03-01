@@ -32,14 +32,20 @@
   </div>
 <div class="container-xxl py-5">
     <div class="container">
-    <% jobs.forEach(function(job) { %>
-        <% const UserId=String(job.UserId[0]) %>
-            <% const CurrentUserId=String(currentUser._id) %>
-                <% if( UserId !=CurrentUserId ) {%>
+
+        <!-- <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Job Listing</h1> -->
+        <% jobs.forEach(function(job) { %>
+            <% const UserId = String(job.UserId[0]) %>
+            <% const CurrentUserId = String(currentUser._id) %>
+           <% if(  UserId != CurrentUserId ) {%>
+           <!-- check if the user apply for this job or -->
+   <% if(! job.applicant.includes(CurrentUserId) ) {%>
+
                     <div class="job-item p-4 mb-4">
                         <div class="row g-4">
                             <div class="col-sm-12 col-md-8 d-flex align-items-center">
                                 <div class="text-start ps-4">
+
 
                                     <!-- check if the user apply for this job or -->
                                     
@@ -70,8 +76,11 @@
                                 </small>
                             </div>
                         </div>
+
                     </div>
-                    <% } %>
+
+                        <% }} %>
+
                         <% }) %>
                     </div>
                 </div>
