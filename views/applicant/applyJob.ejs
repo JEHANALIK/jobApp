@@ -1,21 +1,42 @@
 <%- include('../user/Userheader') %>
-  <form method="POST" action="/applicant/applyJob">
-    <div class="card">
-      <div class="card-body col-lg-9 col-md-12 col-sm-12">
-        <div class="form-floating mb-3">
-          <input name="phone" type="text" class="form-control" id="floatingInput" placeholder="Password" required>
-          <label for="floatingInput">Phone Number</label>
-        </div>
-        <div class="form-floating  mb-3">
-          <input name="CV" type="file" class="form-control" id="floatingFile" placeholder="file" required>
-          <label for="formFile" class="form-label"></label>
-  
-        </div>
-        <input name="user" type="hidden" value="<%= currentUser._id %>">
-        <input name="job" type="hidden" value="<%=JobId %>">
-        <button type="submit" class="btn btn-outline-secondary btn-md">Apply</button>
-      </div>
 
-    </div>
-    </div>
-  </form>
+
+  <section class="ftco-section">
+    <div class="container">
+            <div class="login-wrap p-3 p-md-4">
+              <h3 class="mb-2">Apply For The Job</h3>
+              <form action="/applicant/applyJob" method="post" class="signup-form mb-5">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group d-flex align-items-center">
+                      <label class="label" for="email">Phone</label>
+                      <input name="phone" type="text" class="form-control" placeholder="" required>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group d-flex align-items-center">
+                      <input name="CV" type="file" class="form-control" id="floatingFile" placeholder="FILE" required>
+                      <label for="formFile" class="form-label"></label>
+                    </div>
+                  </div>
+                <br>
+                <input name="user" type="hidden" value="<%= currentUser._id %>">
+                <input name="job" type="hidden" value="<%=JobId %>">
+                  <div class="col-md-12">
+                    <div class="form-group signup">
+                      <button type="submit" class="btn sign">Apply Now</button>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group signup">
+                     
+                    </div>
+                  </div>
+                </div>
+  
+              </form>
+  
+            </div>
+          </div>
+  </section>
