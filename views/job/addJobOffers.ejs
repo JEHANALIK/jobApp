@@ -38,3 +38,71 @@
       </div>
     </div>
   </form>
+
+
+ 
+<section class="ftco-section">
+  <div class="container">
+          <div class="login-wrap p-4 p-md-4 col-lg-9 col-md-12 col-sm-12">
+            <h3 class="mb-3">Add Job Offer</h3>
+            <form action="/job/addJobOffers" method="post" class="signup-form mb-3">
+              <div class="row">
+
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label class="label" for="name">Title</label>
+                    <input name="title" type="text" class="form-control" placeholder="Title" required>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label class="label" >Salary</label>
+                    <input name="salary" type="text" class="form-control" placeholder="Salary(Number)" required>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label class="label" >orgnization</label>
+                    <input name="organization" type="text" class="form-control" placeholder="organization" required>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label class="label">description</label>
+                    <input name="description" type="text" class="form-control" placeholder="description" >
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label class="label" >Time Type</label>
+                    <input name="timeType" type="text" class="form-control" placeholder="Time Type" required>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label class="label" >Location</label>
+                    <input name="location" type="text" class="form-control" placeholder="location" required>
+                  </div>
+                </div>
+              <br>
+                <div class="col-md-12">
+                  <div class="form-group signup">
+                    <button type="submit" class="btn sign">Add</button>
+                    <input type="hidden" name="UserId" value="<%= currentUser._id %>"></input>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+            <br>
+           
+          </div>
+        </div>
+</section>
+
+

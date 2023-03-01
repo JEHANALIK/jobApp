@@ -1,34 +1,50 @@
 <%- include('../home/header') %>
-<form method="POST" action="/auth/signup">
-    <div class="card">
-        <div class="card-body col-lg-9 col-md-12 col-sm-12">
-
-            <div class="form-floating mb-3 ">
-                <input name="firstName" type="text" class="form-control" id="floatingInput" placeholder="text" required>
-                <label for="floatingPassword">First Name</label>
-              </div> 
-
-              <div class="form-floating mb-3">
-                <input name="lastName" type="text" class="form-control" id="floatingInput" placeholder="text" required>
-                <label for="floatingPassword">Last Name</label>
+<section class="ftco-section">
+  <div class="container">
+          <div class="login-wrap p-4 p-md-4">
+            <h3 class="mb-3">Create an account</h3>
+            <form action="/auth/signup" method="post" class="signup-form mb-3">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label class="label" for="name">First Name</label>
+                    <input name="firstName" type="text" class="form-control" placeholder="First Name" required>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label class="label" for="name">Last Name</label>
+                    <input name="lastName" type="text" class="form-control" placeholder="last Name" required>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label class="label" for="email">Email Address</label>
+                    <input name="emailAddress" type="text" class="form-control" placeholder="johndoe@email.com"required>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label class="label" for="password">Password</label>
+                    <input name="password" type="password" class="form-control" placeholder="Password" required>
+                  </div>
+                </div>
+              <br>
+                <div class="col-md-12">
+                  <div class="form-group signup ">
+                    <button type="submit" class="btn sign">Sign Up</button>
+                  </div>
+                </div>
               </div>
 
-            <div class="form-floating mb-3">
-                <input name="emailAddress" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                <label for="floatingInput">Email address</label>
-              </div>
-
-              <div class="form-floating mb-3">
-                <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
-                <label for="floatingPassword">Password</label>
-              </div>
-
-              <div>
-                <button type="submit" class="btn btn-outline-secondary btn-md">Sign Up</button>
-              </div>
-              
+            </form>
+            
+            <div class="w-100 text-center">
+              <br>
+          <p class="mt-3">I already have an account! <a href="/auth/signin">Sign In</a></p>
+            </div>
+          </div>
         </div>
-      </div>
-</form>
+</section>
 
 
