@@ -1,10 +1,13 @@
 ## Job Lounge
 
 This is a web application for a job portal/recruiting website called "Job Lounge". It allows job seekers to apply for job openings, and employers to post job openings and review applications.
+---
 ![2023-03-01](https://user-images.githubusercontent.com/114671518/222177391-7241bd3b-233c-4a5e-910c-01159e819dee.png)
+
+
 ![2023-03-01](https://user-images.githubusercontent.com/114671518/222177597-c0534e70-047c-43de-93b0-2338d2173a45.png)
 
-
+---
 ## Features
 *	Job seeker can create an account and profile.
 *	Employer can create an account and post job openings.
