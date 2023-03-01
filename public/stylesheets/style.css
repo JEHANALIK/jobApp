@@ -4,7 +4,7 @@
 
 /* header */
 header {
-  background-color: rgb(36, 38, 37);
+  background-color: #6c757d;
   width: 100%;
   display: flex;
   position: fixed;
@@ -59,18 +59,22 @@ li {
   border-radius: 2px;
   box-shadow: 0 0 40px rgba(0, 0, 0, .08);
   transition: .8s;
-  background-color: #737373;
-  color: rgb(36, 38, 37);
+  background-color: #202020;
+  /* background-color: #6085ad; */
+  color: white;
 }
 .title-name{
   color: #fff;
 }
  .job-item:hover{
-  background-color: #73737389;
+  background-color: #6d7985;
   color: #fff;
  }
 .text-primary {
-  color:rgb(36, 38, 37) !important
+  color: #d2d2d2 !important
+}
+.btn.apply-btn:hover{
+  background-color: #202020;
 }
 
 
@@ -82,7 +86,7 @@ li {
 }
 
 .site-footer {
-  background-color: rgb(36, 38, 37);
+  background-color: #6c757d;
   padding: 30px 10px;
   font-size: 15px;
   color: #737373;
@@ -164,13 +168,13 @@ i {
 
   transition: .5s;
   color: #FFFFFF;
-  background-color: rgb(36, 38, 37);
+  background-color: #000000;
 }
 
-.btn:hover,
+/* .btn:hover,
 .btn.btn-secondary {
  background-color: #0d1e3253;
-}
+} */
 
 .btn-square {
   width: 35px;
@@ -198,7 +202,7 @@ body {
   font-size: 16px;
   line-height: 1.8;
   font-weight: normal;
-  background: rgb(36, 38, 37);
+  background: #fff;
   color: gray; }
 
 a {
@@ -275,7 +279,7 @@ h1, h2, h3, h4, h5,
 .login-wrap {
   margin: 0 auto;
   position: relative;
-  background: #dddbdb; }
+  background: #c4c4c4; }
   .login-wrap h3 {
     font-weight: 300; }
     .login-wrap h3 span {
