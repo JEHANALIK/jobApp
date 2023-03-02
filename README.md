@@ -11,7 +11,6 @@ This is a web application for a job portal/recruiting website called "Job Lounge
 ## Features
 *	Job seeker can create an account and profile.
 *	Employer can create an account and post job openings.
-*	Admin can manage users, job postings, and applications
 
 ## Technologies Used
 *	Backend: Node.js, Express.js, MongoDB, Mongoose,React.js
