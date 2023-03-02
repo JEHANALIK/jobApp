@@ -1,26 +1,50 @@
 <%- include('../user/Userheader') %>
-  <form method="POST" action="/auth/changePass">
-      <div class="card">
-          <div class="card-body col-lg-9 col-md-12 col-sm-12">
-  
-              <div class="form-floating mb-3 ">
-                  <input name="Password" type="password" class="form-control" id="floatingInput" placeholder="Password" required>
-                  <label for="floatingPassword">Password</label>
-                </div> 
-  
-                <div class="form-floating mb-3 ">
-                    <input name="Password2" type="password" class="form-control" id="floatingInput" placeholder="Password" required>
-                    <label for="floatingPassword">Confirm Password</label>
-                  </div> 
-  
-                <div>
-                  <input type="hidden" value="<%= users._id %>"  name='id'>
-                  <button type="submit" class="btn btn-outline-secondary btn-md">Change</button>
+  <section class="ftco-section">
+    <div class="container">
+            <div class="login-wrap p-3 p-md-4">
+              <h3 class="mb-2 d-flex justify-content-center">Change Password</h3>
+              <form action="/auth/changePass" method="post" class="signup-form mb-5 d-flex">
+                <div class="row">
+                  
+                  <div class="col-md-12">
+                    <div class="form-floating mb-3 ">
+                      <input name="Password" type="password" class="form-control" id="floatingInput" placeholder="Password" required>
+                      <label for="floatingPassword">Password</label>
+                    </div> 
+                  </div>
+
+
+                  <div class="col-md-12">
+                    <div class="form-floating mb-3 ">
+                      <input name="Password2" type="password" class="form-control" id="floatingInput" placeholder="Password" required>
+                      <label for="floatingPassword">Confirm Password</label>
+                    </div>
+                  </div>
+                <br>
+                
+                
+                  <div class="col-md-12">
+                    <div class="form-group signup">
+                      <button type="submit" class="btn btn-outline-secondary btn-md">Save</button>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group signup">
+                     
+                    </div>
+                  </div>
                 </div>
+                <input type="hidden" value="<%= users._id %>"  name='id'>
+              </form>
   
+            </div>
           </div>
-        </div>
-  </form>
+  </section>
+
+
+  
+  
   
   
   

@@ -1,23 +1,64 @@
 <%- include('../user/Userheader') %>
 
-<h2> <%= job.title %></h2>
-<div>
-<div>
-    salary: <%= job.salary %>
-</div>
-<div>
-    orgnization: <%= job.organization %>
-</div>
-<div>
-    description: <%= job.description %>
-</div>
-<div>
-    timeType: <%= job.timeType %>
-</div>
 
-<div>
-    location: <%= job.location %>
-</div>
 
-<a href="/applicant/applyJob?id=<%= job._id %>">Apply</a>
-</div>
+<section class="ftco-section">
+    <div class="container">
+            <div class="edit login-wrap p-4 p-md-4 col-lg-12 ">
+              <h3 class="mb-3 d-flex justify-content-center"><%= job.title %></h3>
+              <form action="/job/editJob" method="post" class="signup-form mb-3">
+                <div class="row">
+  
+                  <!-- <div class="col-md-12">
+                    <div class="form-group d-flex align-items-center">
+                      <label class="label" for="name"></label>
+                      <input name="title" type="text" class="form-control" placeholder="Title"  value="<%= job.title %>" required>
+                    </div>
+                  </div> -->
+  
+                  <div class="col-md-12">
+                    <div class="form-group d-flex align-items-center">
+                        <i class="far fa-money-bill-alt text-dark me-2 fa-lg"></i>
+                       <h6>Salary: <%= job.salary %></h6> 
+                    </div>
+                  </div>
+  
+                  <div class="col-md-12">
+                    <div class="form-group d-flex align-items-center">
+                        <i class="far fa text-dark me-2 fa-lg"></i>
+                      <h6>Orgnization: <%= job.organization %></h6>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-12">
+                    <div class="form-group d-flex align-items-center">
+                        <i class="far text-dark me-2 fa-lg"></i>
+                      <p>Description: <%= job.description %></p>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-12">
+                    <div class="form-group d-flex align-items-center">
+                        <i class="far fa-clock text-dark me-2 fa-lg"></i>
+                      <h6>Time Type: <%= job.timeType %></h6>
+                    </div>
+                  </div>
+  
+                  <div class="col-md-12">
+                    <div class="form-group d-flex align-items-center">
+                    <i class="fa fa-map-marker-alt text-dark me-2 fa-lg"></i>
+                      <h6>Location: <%= job.location %></h6>
+                    </div>
+                  </div>
+                <br>
+                  <div class="col-md-12 mb-3 mb-3 d-flex justify-content-between  ">
+                    <div class="form-group signup mb-3 d-flex flex-column">
+                    <a class="btn btn-outline-secondary btn-md text-right" href="/applicant/applyJob?id=<%= job._id %>">Apply</a>
+                     </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+  </section>

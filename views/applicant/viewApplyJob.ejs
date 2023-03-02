@@ -1,6 +1,8 @@
 <%- include('../user/Userheader') %>
                         <div class="container-xxl py-5">
                             <div class="container">
+                                <h3 class="mb-3 d-flex justify-content-center">My Applications</h3>
+                                <hr>
                                 <% applicants.forEach(function(applicant) { %>
                                     <% const UserId=String(applicant.user[0]) %>
                                         <% const CurrentUserId=String(currentUser._id) %>

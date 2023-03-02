@@ -1,43 +1,65 @@
 <%- include('../user/Userheader') %>
-<h1> Edit Job Offer </h1>
-<form method="POST" action="/job/editJob">
-    <div class="card">
-        <div class="card-body col-lg-9 col-md-12 col-sm-12">
+<section class="ftco-section">
+  <div class="container">
+          <div class="login-wrap p-4 p-md-4 col-lg-9 col-md-12 col-sm-12">
+            <h3 class="mb-3 d-flex justify-content-center">Edit Job Offer</h3>
+            <form action="/job/editJob" method="post" class="signup-form mb-3">
+              <div class="row">
 
-            <div class="form-floating mb-3 ">
-                <input name="title" type="text" class="form-control" id="floatingInput" placeholder="text" value="<%= job.title %>">
-                <label for="floatingInput">Title</label>
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label class="label" for="name">Title</label>
+                    <input name="title" type="text" class="form-control" placeholder="Title"  value="<%= job.title %>" required>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label class="label" >Salary</label>
+                    <input name="salary" type="text" class="form-control" placeholder="Salary(Number)" value="<%=job.salary %>" required>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label class="label" >orgnization</label>
+                    <input name="organization" type="text" class="form-control" placeholder="organization" value="<%= job.organization%>" required>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label class="label">description</label>
+                    <textarea name="description" type="text" class="form-control" placeholder="description"><%=job.description%></textarea>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label class="label" >Time Type</label>
+                    <input name="timeType" type="text" class="form-control" placeholder="Time Type" value="<%=job.timeType%>" required>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-group d-flex align-items-center">
+                    <label class="label" >Location</label>
+                    <input name="location" type="text" class="form-control" placeholder="location" value="<%= job.location%>" required>
+                  </div>
+                </div>
+              <br>
+                <div class="col-md-12 mb-3 mb-3">
+                  <div class="form-group signup mb-3">
+                    <button type="submit" class="btn btn-outline-secondary d-flex justify-content-center mb-3">Edit</button>
+                    <br>
+                    <input type="hidden"value="<%=job._id %>" name="id">
+                    <br>
+                  </div>
+                </div>
               </div>
-
-            <div class="form-floating mb-3 ">
-                <input name="salary" type="text" class="form-control" id="floatingInput" placeholder="text" value="<%=job.salary %>">
-                <label for="floatingInput">Salary</label>
-              </div>
-
-            <div class="form-floating mb-3 ">
-                <input name="organization" type="text" class="form-control" id="floatingInput" placeholder="text" value="<%= job.organization%>">
-                <label for="floatingInput">orgnization</label>
-              </div> 
-
-            <div class="form-floating mb-3 ">
-                <textarea name="description"  cols="30" rows="10" class="form-control" id="floatingInput" placeholder="text" ><%=job.description%></textarea>
-                <label for="floatingInput">description</label>
-              </div>
-
-            <div class="form-floating mb-3 ">
-                <input name="timeType" type="text" class="form-control" id="floatingInput" placeholder="text" value="<%=job.timeType%>">
-                <label for="floatingInput">Time Type</label>
-              </div>
-              
-            <div class="form-floating mb-3 ">
-                <input name="location" type="location" class="form-control" id="floatingInput" placeholder="text" value="<%= job.location%>">
-                <label for="floatingInput">Location</label>
-              </div> 
-
-            <div>
-              <button type="submit" class="btn btn-outline-secondary btn-md">Edit Job</button>
-              </div>
-              <input type="hidden"value="<%=job._id %>" name="id">
+            </form>
+          </div>
         </div>
-      </div>
-</form>
+</section>
+
+

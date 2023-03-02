@@ -2,7 +2,7 @@
 <section class="ftco-section">
   <div class="container">
           <div class="login-wrap p-4 p-md-4">
-            <h3 class="mb-3">Create an account</h3>
+            <h3 class="mb-3 d-flex justify-content-center ">Create an account</h3>
             <form action="/auth/edit" method="post" class="signup-form mb-3">
               <div class="row">
                 <div class="col-md-12">
@@ -27,13 +27,12 @@
               <br>
                 <div class="col-md-12">
                   <div class="form-group signup ">
-                    <button type="submit" class="btn sign">Save</button>
+                    <button type="submit" class="btn btn-outline-secondary btn-md">Save</button>
                   </div>
                 </div>
               </div>
               <input type="hidden" value="<%= users._id %>"  name='id'>
             </form>
-            
             <div class="w-100 text-center">
               <br>
           <p class="mt-3">Change Password?<a id="signin" href="changePass">Change Password</a></p>
