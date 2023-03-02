@@ -9,8 +9,10 @@ This is a web application for a job portal/recruiting website called "Job Lounge
 
 ---
 ## Features
+
 *	Job seeker can create an account and profile and apply for jobs.
 *	Employer can create an account and post job openings, edit and delete them.
+
 
 
 ## Technologies Used
