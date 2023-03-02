@@ -22,6 +22,8 @@ li {
 /* end of header */
 
 
+
+
 /* slider */
 .carousel-item {
   padding-top: 7vh;
@@ -42,7 +44,11 @@ li {
 }
 
 
- /*** job offers items ***/
+
+
+
+
+ /*** job items ***/
  @media (min-width: 300px) {
   .hide {
     padding-top: 50px;
@@ -59,8 +65,8 @@ li {
   border-radius: 2px;
   box-shadow: 0 0 40px rgba(0, 0, 0, .08);
   transition: .8s;
-  background-color: #202020;
-  /* background-color: #6085ad; */
+  background-color: #232323;
+  /* background-color: #202020; */
   color: white;
 }
 .mb-3.job-title h3{
@@ -76,6 +82,9 @@ li {
 .text-primary {
   color: #d2d2d2 !important
 }
+.text-dark{
+  color: #2d3f61 !important
+}
 .btn.apply-btn:hover{
   background-color: #202020;
 }
@@ -85,8 +94,9 @@ li {
 
 
 
+
+/* buttons */
 .btn {
-  /* transition: .5s; */
   color: #fff;
   background-color: #000000;
 }
@@ -111,17 +121,13 @@ li {
 
 
 
-
-
-/* sign up form*/
+/* all forms */
 body {
   font-size: 16px;
   line-height: 1.8;
   font-weight: normal;
   background: #fff;
-  /* color: gray;  */
 }
-
 #signin{
   color: #fff;
 }
@@ -144,7 +150,6 @@ h1, h2, h3, h4, h5,
   overflow: hidden;
   border-radius: 5px;
   }
-
 .text-wrap, .login-wrap {
   width: 100%; }
 
@@ -155,7 +160,9 @@ h1, h2, h3, h4, h5,
   @media (min-width: 992px) {
     .text-wrap {
       width: 70%; } }
-
+      @media (min-width: 992px) {
+        .login-wrap.edit {
+          width: 100%; } }
 @media (min-width: 992px) {
   .login-wrap {
     width: 50%; } }
@@ -168,7 +175,6 @@ h1, h2, h3, h4, h5,
     font-weight: 700;
     color: #fff;
     font-size: 24px; }
-
 .login-wrap {
   margin: 0 auto;
   position: relative;
@@ -180,7 +186,6 @@ h1, h2, h3, h4, h5,
       display: block;
       font-weight: 400;
       color: rgba(0, 0, 0, 0.4); }
-
 .form-group {
   width: 100%; }
   .form-group label {
@@ -190,7 +195,6 @@ h1, h2, h3, h4, h5,
     margin-bottom: 0; }
     .form-group label.label {
       width: 150px; }
-
 .form-control {
   width: calc(100% -150px);
   height: 50px;
@@ -217,6 +221,11 @@ position: absolute;
 margin: 0 auto;
   }
 /* end of sign up form*/
+
+
+
+
+
 
 /* footer */
 .sado img {
