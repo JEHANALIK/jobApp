@@ -4,7 +4,7 @@
 ### https://job-lounge-fnuc.onrender.com/ 
 ---
 
-This is a web application for a job portal/recruiting website called "Job Lounge". It allows job seekers to apply for job openings, and employers to post job openings and review applications.
+A web application for a job portal/recruiting website called "Job Lounge". It allows job seekers to apply for job openings, and employers to post job openings and review applications.
 ---
 ![2023-03-01](https://user-images.githubusercontent.com/114671518/222177391-7241bd3b-233c-4a5e-910c-01159e819dee.png)
 
