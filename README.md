@@ -1,6 +1,6 @@
 # Job Lounge
 
-### Clock here to open the website:
+### Click here to view the website:
 ### https://job-lounge-fnuc.onrender.com/ 
 ---
 
